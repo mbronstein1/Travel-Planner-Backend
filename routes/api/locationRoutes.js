@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Location, Trip } = require('../../models');
+const { Location, Trip, Traveller } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const getOneLocation = await Location.findByPk(req.params.id, {
-            include: [{ model: Trip }],
+            include: [{ model: Traveller, through: Trip, as: "location_travellers" }],
         });
 
         if (!getOneLocation) {

@@ -1,4 +1,4 @@
-# Travel-Planner-Mini-Project-13
+# Travel Planner Backend
 
 ## Description
 This is the thirteenth mini-project in the Northwestern Coding Bootcamp (Module 13). It is the back-end functionality for a travel planner, where a user can access traveler information, location information, and trip information associated with the traveler and/or location. A user can also post new information for the above 3 categories, as well as delete information.
